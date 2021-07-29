@@ -1,7 +1,5 @@
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.*;
-import java.util.regex.*;
+import java.util.HashMap;
 
 public class Main{
     public static void main(String[] args) {
@@ -12,34 +10,18 @@ public class Main{
 
         for(String i:liste){
             
-
-            Pattern p;
-            Matcher m;
-
-            p=Pattern.compile(".*488gt3.*",Pattern.CASE_INSENSITIVE);
-            m = p.matcher(i);
-            if(m.find()){
-                Remplissage test = new Remplissage();
-                test.remplissage("ferrari", i);
-            }
-            p=Pattern.compile(".*ferrari_gts.*",Pattern.CASE_INSENSITIVE);
-            m = p.matcher(i);
-            if(m.find()){
-                Remplissage test = new Remplissage();
-                test.remplissage("ferrari", i);
-            }
-            p=Pattern.compile(".*m4gt3.*",Pattern.CASE_INSENSITIVE);
-            m = p.matcher(i);
-            if(m.find()){
-                Remplissage test = new Remplissage();
-                test.remplissage("bmwm4gt3", i);
-            }
-            p=Pattern.compile(".*bmwgt3.*",Pattern.CASE_INSENSITIVE);
-            m = p.matcher(i);
-            if(m.find()){
-                Remplissage test = new Remplissage();
-                test.remplissage("bmwm4gt3", i);
-            }    
+            Remplissage test = new Remplissage();
+            HashMap<String,String> hmap = new HashMap<String,String>();
+            hmap.put(".*488gt3.*", "ferrari");
+            hmap.put(".*ferrari_gts.*", "ferrari");
+            hmap.put(".*m4gt3.*", "bmwm4gt3");
+            hmap.put(".*bmwgt3.*",  "bmwm4gt3");
+            
+            for(String yol:hmap.keySet()){
+                if(test.pattern(yol, i)){
+                    test.remplissage(hmap.get(yol), i);
+                }
+            }   
         }
         
     }
