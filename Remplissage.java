@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
@@ -8,8 +10,17 @@ import java.util.regex.Pattern;
 public class Remplissage {
 
     public void remplissage(String dossier,String file){
-        File fSource=new File("C:\\Users\\OMINKOUA\\Desktop\\Donnée\\"+file);
-        File fDestination=new File("C:\\Users\\OMINKOUA\\Documents\\Iracing\\setup"+dossier+"\\"+file);
+        BufferedReader reader = null;
+        String line = null;
+        try {
+            reader = new BufferedReader(new FileReader("config.txt"));
+            line = reader.readLine();
+            System.out.println(line);
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+        File fSource=new File(line+"Donnée\\"+file);
+        File fDestination=new File(line+"Iracing\\setup\\"+dossier+"\\Garage61 - Team rabbit racing\\"+file);
         System.out.println(fDestination);        
         StandardCopyOption operationAtomique=StandardCopyOption.ATOMIC_MOVE;
         StandardCopyOption remplacerSiExiste=StandardCopyOption.REPLACE_EXISTING;

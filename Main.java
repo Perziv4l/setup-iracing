@@ -1,11 +1,23 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class Main{
     public static void main(String[] args) {
 
-
-        File repertoire = new File("C:\\Users\\OMINKOUA\\Desktop\\Donnée");
+        BufferedReader reader = null;
+        String line = null;
+        try {
+            reader = new BufferedReader(new FileReader("config.txt"));
+            line = reader.readLine();
+            System.out.println(line);
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+        File repertoire = new File(line+"Donnée");
+        System.out.println(repertoire);
         String liste[] = repertoire.list();      
 
         for(String i:liste){
