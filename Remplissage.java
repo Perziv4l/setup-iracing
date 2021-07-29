@@ -9,7 +9,7 @@ public class Remplissage {
 
     public void remplissage(String dossier,String file){
         File fSource=new File("C:\\Users\\OMINKOUA\\Desktop\\Donnée\\"+file);
-        File fDestination=new File("C:\\Users\\OMINKOUA\\Desktop\\Dossier\\"+dossier+"\\"+file);
+        File fDestination=new File("C:\\Users\\OMINKOUA\\Documents\\Iracing\\setup"+dossier+"\\"+file);
         System.out.println(fDestination);        
         StandardCopyOption operationAtomique=StandardCopyOption.ATOMIC_MOVE;
         StandardCopyOption remplacerSiExiste=StandardCopyOption.REPLACE_EXISTING;
