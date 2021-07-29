@@ -20,7 +20,7 @@ public class Remplissage {
             System.out.println(ioe.getMessage());
         }
         File fSource=new File(line+"Donnée\\"+file);
-        File fDestination=new File(line+"Iracing\\setup\\"+dossier+"\\Garage61 - Team rabbit racing\\"+file);
+        File fDestination=new File(line+"iRacing\\setups\\"+dossier+"\\Garage 61 - Team Rabbit Racing\\"+file);
         System.out.println(fDestination);        
         StandardCopyOption operationAtomique=StandardCopyOption.ATOMIC_MOVE;
         StandardCopyOption remplacerSiExiste=StandardCopyOption.REPLACE_EXISTING;
