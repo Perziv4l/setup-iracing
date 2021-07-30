@@ -1,6 +1,6 @@
 # setup-iracing
 
-Utilitaire java pour organiser des fichiers des configuration iracing
+Utilitaire java pour organiser des fichiers de configuration iracing
 
 ## Notes
 
