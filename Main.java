@@ -50,6 +50,7 @@ public class Main{
         hmap.put(".*audi_gts.*",  "audir8gt3");
         hmap.put(".*488gt3.*", "ferrari488gt3");
         hmap.put(".*ferrari_gts.*", "ferrari488gt3");
+        hmap.put(".*ferrarigt3.*", "ferrari488gt3");
         hmap.put(".*m4gt3.*", "bmwm4gt3");
         hmap.put(".*bmwgt3.*",  "bmwm4gt3");
         hmap.put(".*lambo.*",  "lamborghinievogt3");
@@ -64,7 +65,37 @@ public class Main{
         hmap.put(".*porsche.*gt3.*",  "porsche911rgt3");
         hmap.put(".*911gt3.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
-        hmap.put(".*cup.*",  "porsche911cup");   
+        hmap.put(".*cup.*",  "porsche911cup");
+        hmap.put(".*tcr.*","audirs3lms");
+        hmap.put(".*rs3.*","audirs3lms");
+        hmap.put(".*m4.*","bmwm4gt4");
+        hmap.put(".*570.*","mclaren570sgt4");
+        hmap.put(".*mclarengt4.*","mclaren570sgt4");
+        hmap.put(".*mclaren-rb.*","mclaren570sgt4");
+        hmap.put(".*718.*","porsche718gt4");
+        hmap.put(".*porschegt4.*","porsche718gt4");
+        hmap.put(".*cayman.*","porsche718gt4");
+        hmap.put(".*fr2.*","formularenault20");
+        hmap.put(".*formularenault_20.*","formularenault20");
+        hmap.put(".*fr3.*5.*","formularenault35");
+        hmap.put(".*formularenault_35.*","formularenault35");
+        hmap.put(".*formularenault35.*","formularenault35");
+        hmap.put(".*f3.*","dallaraf3");
+        hmap.put(".*f1.*","mclarenmp430");
+        hmap.put(".*pm18.*","indypropm18");
+        hmap.put(".*i.*p.*2000.*","indypropm18");
+        hmap.put(".*ir01.*","dallarair01");
+        hmap.put(".*dallara_formula.*","dallarair01");
+        hmap.put(".*oval.*","dallarair18");
+        hmap.put(".*ir18.*","dallarair18");
+        hmap.put(".*indy.*","dallarair18");
+        hmap.put(".*skippy.*","rt2000");
+        hmap.put(".*mustang.*","stockcars fordmustang2019");
+        hmap.put(".*toyota.*","stockcars toyotacamry");
+        hmap.put(".*camaro.*","stockcars camarozl12018");
+        hmap.put(".*sti.*","subaruwrxsti");
+        hmap.put(".*beetle.*","vwbeetlegrc");
+        hmap.put(".*fiesta.*","fordfiestarswrc");  
 
         for(String i:liste){
             for(String key:hmap.keySet()){
