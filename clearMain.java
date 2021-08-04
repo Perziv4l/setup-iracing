@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 public class clearMain {
     
     public static void main(String[] args) {
