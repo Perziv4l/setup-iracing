@@ -29,7 +29,8 @@ public class Main{
 
         HashMap<String,String> hmap = new HashMap<String,String>();
         
-        hmap.put(".*r18.*",  "audir18");
+        hmap.put(".*[^i]r18.*",  "audir18");
+        hmap.put(".*audir18.*",  "audir18");
         hmap.put(".*audilmp1.*",  "audir18");
         hmap.put(".*919.*",  "porsche919");
         hmap.put(".*porschelmp1.*",  "porsche919");
@@ -48,16 +49,20 @@ public class Main{
         hmap.put(".*porschegte.*",  "porsche991rsr");
         hmap.put(".*r8.*",  "audir8gt3");
         hmap.put(".*audi_gts.*",  "audir8gt3");
+        hmap.put(".*irs.*audi.*",  "audir8gt3");
         hmap.put(".*488gt3.*", "ferrari488gt3");
         hmap.put(".*ferrari_gts.*", "ferrari488gt3");
         hmap.put(".*ferrarigt3.*", "ferrari488gt3");
         hmap.put(".*m4gt3.*", "bmwm4gt3");
         hmap.put(".*bmwgt3.*",  "bmwm4gt3");
+        hmap.put(".*bmw.driver.*",  "bmwm4gt3");
         hmap.put(".*lambo.*",  "lamborghinievogt3");
+        hmap.put(".*huracanevogt3.*",  "lamborghinievogt3");
         hmap.put(".*mp4.*",  "mclarenmp4");
         hmap.put(".*mclaren_gts.*",  "mclarenmp4");
         hmap.put(".*mclarengt3.*",  "mclarenmp4");
         hmap.put(".*macca.*",  "mclarenmp4");
+        hmap.put(".*mclaren.driver.*",  "mclarenmp4");
         hmap.put(".*amg.*",  "mercedesamggt3");
         hmap.put(".*merc.*",  "mercedesamggt3");
         hmap.put(".*911rs.*",  "porsche911rgt3");
@@ -68,7 +73,9 @@ public class Main{
         hmap.put(".*cup.*",  "porsche911cup");
         hmap.put(".*tcr.*","audirs3lms");
         hmap.put(".*rs3.*","audirs3lms");
-        hmap.put(".*m4.*","bmwm4gt4");
+        hmap.put(".*bmwm4gt4.*","bmwm4gt4");
+        hmap.put(".*bmwgt4.*","bmwm4gt4");
+        hmap.put(".*m4gt4.*","bmwm4gt4");
         hmap.put(".*570.*","mclaren570sgt4");
         hmap.put(".*mclarengt4.*","mclaren570sgt4");
         hmap.put(".*mclaren-rb.*","mclaren570sgt4");
@@ -90,12 +97,13 @@ public class Main{
         hmap.put(".*ir18.*","dallarair18");
         hmap.put(".*indy.*","dallarair18");
         hmap.put(".*skippy.*","rt2000");
+        hmap.put(".*rt2000.*","rt2000");
         hmap.put(".*mustang.*","stockcars fordmustang2019");
         hmap.put(".*toyota.*","stockcars toyotacamry");
         hmap.put(".*camaro.*","stockcars camarozl12018");
         hmap.put(".*sti.*","subaruwrxsti");
         hmap.put(".*beetle.*","vwbeetlegrc");
-        hmap.put(".*fiesta.*","fordfiestarswrc");  
+        hmap.put(".*fiesta.*","fordfiestarswrc"); 
 
         for(String i:liste){
             for(String key:hmap.keySet()){
