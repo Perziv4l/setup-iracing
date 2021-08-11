@@ -58,6 +58,7 @@ public class Main{
         hmap.put(".*bmw.driver.*",  "bmwm4gt3");
         hmap.put(".*lambo.*",  "lamborghinievogt3");
         hmap.put(".*huracanevogt3.*",  "lamborghinievogt3");
+        hmap.put(".*huracan.*",  "lamborghinievogt3");
         hmap.put(".*mp4.*",  "mclarenmp4");
         hmap.put(".*mclaren_gts.*",  "mclarenmp4");
         hmap.put(".*mclarengt3.*",  "mclarenmp4");
