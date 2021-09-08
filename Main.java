@@ -3,13 +3,30 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.FileAttribute;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.swing.JOptionPane;
+
 import java.util.HashMap;
 
 public class Main{
     public static void main(String[] args) {
+
+        String s = (String)JOptionPane.showInputDialog(
+        null,
+        "Completer :\n \"Sous Forme S5W10\"",
+        "Nom Sous dossier",
+        JOptionPane.QUESTION_MESSAGE,
+        null,
+        null,
+        "S?W?");
+
+        s = s.toUpperCase();
 
         BufferedReader reader = null;
         String line = null;
@@ -54,17 +71,20 @@ public class Main{
         hmap.put(".*ferrari_gts.*", "ferrari488gt3");
         hmap.put(".*ferrarigt3.*", "ferrari488gt3");
         hmap.put(".*m4gt3.*", "bmwm4gt3");
+        hmap.put(".*m4\\.driver.*", "bmwm4gt3");
         hmap.put(".*bmwgt3.*",  "bmwm4gt3");
         hmap.put(".*bmw.driver.*",  "bmwm4gt3");
         hmap.put(".*lambo.*",  "lamborghinievogt3");
         hmap.put(".*huracanevogt3.*",  "lamborghinievogt3");
         hmap.put(".*huracan.*",  "lamborghinievogt3");
-        hmap.put(".*mp4.*",  "mclarenmp4");
+        hmap.put(".*mp4[^3].*",  "mclarenmp4");
+        hmap.put(".*mp430.*",  "mclarenmp430");
         hmap.put(".*mclaren_gts.*",  "mclarenmp4");
         hmap.put(".*mclarengt3.*",  "mclarenmp4");
         hmap.put(".*macca.*",  "mclarenmp4");
         hmap.put(".*mclaren.driver.*",  "mclarenmp4");
         hmap.put(".*amg.*",  "mercedesamggt3");
+        hmap.put(".*Amg.*",  "mercedesamggt3");
         hmap.put(".*merc.*",  "mercedesamggt3");
         hmap.put(".*911rs.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
@@ -108,26 +128,57 @@ public class Main{
 
         for(String i:liste){
             for(String key:hmap.keySet()){
-                if(check_pattern(key, i)) remplissage(line,hmap.get(key), i);
+                if(check_pattern(key, i)) remplissage(line,hmap.get(key), s, i);
             }   
         }       
     }
 
-    public static void remplissage(String basepath, String destinationDirName, String fileName){
+    public static void remplissage(String basepath, String destinationDirName, String week,String fileName){
 
         BufferedReader reader = null;
 
         File sourceFile = new File(basepath+"Donnée\\"+fileName);
-        File destinationFile = new File(basepath+"iRacing\\setups\\"+destinationDirName+"\\Garage 61 - Team Rabbit Racing\\"+fileName);
-        System.out.println(destinationFile);        
-
-        StandardCopyOption operationAtomique = StandardCopyOption.ATOMIC_MOVE;
-        StandardCopyOption remplacerSiExiste = StandardCopyOption.REPLACE_EXISTING;
-
+        
         try{
-            Files.move(sourceFile.toPath(), destinationFile.toPath(),remplacerSiExiste);
-        } catch(IOException ex){
-            System.out.println(ex.getMessage());
+            String[] nomSetup = {"PDS","VRS","IRS","MAJOR","CRAIG"};
+            for(String h:nomSetup){
+                Path path = Paths.get(basepath+"iRacing\\setups\\"+destinationDirName+"\\Garage 61 - Team Rabbit Racing\\"+week+"\\"+h);
+                Files.createDirectories(path);
+            }
+
+            HashMap<String,String> hmapNom = new HashMap<String,String>();
+        
+            hmapNom.put("IRS.*",  "IRS");
+            hmapNom.put("VRS.*",  "VRS");
+            hmapNom.put("PDS.*",  "PDS");
+            hmapNom.put(".*DRIVE.*",  "MAJOR");
+            hmapNom.put("^2... .*",  "MAJOR");
+            hmapNom.put("^2...\\..*",  "MAJOR");
+            hmapNom.put("^2...-.*",  "CRAIG");
+            hmapNom.put("^2..._.*",  "CRAIG");
+            
+
+            boolean touch = false;
+            for(String key:hmapNom.keySet()){
+                if(check_pattern(key, fileName)){
+                    File destinationFile = new File(basepath+"iRacing\\setups\\"+destinationDirName+"\\Garage 61 - Team Rabbit Racing\\"+week+"\\"+hmapNom.get(key)+"\\"+fileName);
+                    System.out.println(destinationFile);
+                    StandardCopyOption operationAtomique = StandardCopyOption.ATOMIC_MOVE;
+                    StandardCopyOption remplacerSiExiste = StandardCopyOption.REPLACE_EXISTING;
+                    Files.move(sourceFile.toPath(), destinationFile.toPath(),remplacerSiExiste);
+                    touch = true;
+                }
+            }
+
+            if(!touch){
+                File destinationFile = new File(basepath+"iRacing\\setups\\"+destinationDirName+"\\Garage 61 - Team Rabbit Racing\\"+week+"\\"+fileName);
+                System.out.println(destinationFile);
+                StandardCopyOption remplacerSiExiste = StandardCopyOption.REPLACE_EXISTING;
+                Files.move(sourceFile.toPath(), destinationFile.toPath(),remplacerSiExiste);
+            }
+            
+        }catch(IOException ex){
+            System.out.println("Attention path non correct"+ex.getMessage());
         }
     }
 
