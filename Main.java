@@ -140,7 +140,7 @@ public class Main{
         File sourceFile = new File(basepath+"Donnée\\"+fileName);
         
         try{
-            String[] nomSetup = {"PDS","VRS","IRS","MAJOR","CRAIG"};
+            String[] nomSetup = {"PDS","VRS","IRS","MAJOR","CRAIG","APEX"};
             for(String h:nomSetup){
                 Path path = Paths.get(basepath+"iRacing\\setups\\"+destinationDirName+"\\Garage 61 - Team Rabbit Racing\\"+week+"\\"+h);
                 Files.createDirectories(path);
@@ -148,14 +148,15 @@ public class Main{
 
             HashMap<String,String> hmapNom = new HashMap<String,String>();
         
-            hmapNom.put("IRS.*",  "IRS");
-            hmapNom.put("VRS.*",  "VRS");
-            hmapNom.put("PDS.*",  "PDS");
+            hmapNom.put("^IRS.*",  "IRS");
+            hmapNom.put("^VRS.*",  "VRS");
+            hmapNom.put("^PDS.*",  "PDS");
             hmapNom.put(".*DRIVE.*",  "MAJOR");
             hmapNom.put("^2... .*",  "MAJOR");
             hmapNom.put("^2...\\..*",  "MAJOR");
             hmapNom.put("^2...-.*",  "CRAIG");
             hmapNom.put("^2..._.*",  "CRAIG");
+            hmapNom.put("^[^(PDS)|(VRS)|(2)](.*_.*){3}$",  "APEX");
             
 
             boolean touch = false;
