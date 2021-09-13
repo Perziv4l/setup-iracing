@@ -67,9 +67,10 @@ public class Main{
         hmap.put(".*r8.*",  "audir8gt3");
         hmap.put(".*audi_gts.*",  "audir8gt3");
         hmap.put(".*irs.*audi.*",  "audir8gt3");
-        hmap.put(".*488gt3.*", "ferrari488gt3");
-        hmap.put(".*ferrari_gts.*", "ferrari488gt3");
-        hmap.put(".*ferrarigt3.*", "ferrari488gt3");
+        hmap.put(".*488gt3.*", "ferrarievogt3");
+        hmap.put(".*488evo.*", "ferrarievogt3");
+        hmap.put(".*ferrari_gts.*", "ferrarievogt3");
+        hmap.put(".*ferrarigt3.*", "ferrarievogt3");
         hmap.put(".*m4gt3.*", "bmwm4gt3");
         hmap.put(".*m4\\.driver.*", "bmwm4gt3");
         hmap.put(".*bmwgt3.*",  "bmwm4gt3");
@@ -83,15 +84,17 @@ public class Main{
         hmap.put(".*mclarengt3.*",  "mclarenmp4");
         hmap.put(".*macca.*",  "mclarenmp4");
         hmap.put(".*mclaren.driver.*",  "mclarenmp4");
+        hmap.put(".*mclaren[^(.driver)|^(gt3)|^(_gts)].*",  "mclaren570sgt4");
         hmap.put(".*amg.*",  "mercedesamggt3");
         hmap.put(".*Amg.*",  "mercedesamggt3");
         hmap.put(".*merc.*",  "mercedesamggt3");
+        hmap.put(".*vss.*",  "fordgt gt3");
         hmap.put(".*911rs.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
         hmap.put(".*porsche.*gt3.*",  "porsche911rgt3");
         hmap.put(".*911gt3.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
-        hmap.put(".*cup.*",  "porsche911cup");
+        hmap.put(".*cup.*",  "porsche992cup");
         hmap.put(".*tcr.*","audirs3lms");
         hmap.put(".*rs3.*","audirs3lms");
         hmap.put(".*bmwm4gt4.*","bmwm4gt4");
@@ -112,6 +115,7 @@ public class Main{
         hmap.put(".*f1.*","mclarenmp430");
         hmap.put(".*pm18.*","indypropm18");
         hmap.put(".*i.*p.*2000.*","indypropm18");
+        hmap.put(".*IP2k.*","indypropm18");
         hmap.put(".*ir01.*","dallarair01");
         hmap.put(".*dallara_formula.*","dallarair01");
         hmap.put(".*oval.*","dallarair18");
@@ -154,9 +158,10 @@ public class Main{
             hmapNom.put(".*DRIVE.*",  "MAJOR");
             hmapNom.put("^2... .*",  "MAJOR");
             hmapNom.put("^2...\\..*",  "MAJOR");
-            hmapNom.put("^2...-.*",  "CRAIG");
-            hmapNom.put("^2..._.*",  "CRAIG");
-            hmapNom.put("^[^(PDS)|(VRS)|(2)](.*_.*){3}$",  "APEX");
+            hmapNom.put("^2...-.*[^(DRIVE)].*",  "CRAIG");
+            hmapNom.put("^[^(2)|^(PDS)|^(VRS)].*_.*[^(DRIVE)].*",  "APEX");
+            hmapNom.put("^2..._.*[^(DRIVE)].*",  "MAJOR");
+            hmapNom.put("^[^(PDS)|^(VRS)|^(2)](.*_.*){3}$",  "APEX");
             
 
             boolean touch = false;
