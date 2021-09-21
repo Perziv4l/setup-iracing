@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 import java.util.HashMap;
 
-public class Main{
+public class Main_David{
     public static void main(String[] args) {
 
         String s = (String)JOptionPane.showInputDialog(
@@ -31,13 +31,9 @@ public class Main{
         BufferedReader reader = null;
         String line = null;
 
-        try {
-            reader = new BufferedReader(new FileReader("config.txt"));
-            line = reader.readLine();
-            System.out.println(line);
-        } catch (IOException ioe) {
-            System.out.println(ioe.getMessage());
-        }
+
+        line = "C:\\Users\\david\\OneDrive\\Documents\\";
+        System.out.println(line);
 
         File repertoire = new File(line+"Donnée");
         System.out.println(repertoire);
