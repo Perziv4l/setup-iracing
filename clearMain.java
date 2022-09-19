@@ -24,18 +24,24 @@ public class clearMain {
             }
             File repertoire = new File(line+"\\iRacing\\setups\\");
             String liste[] = repertoire.list();      
+            String[] listeWeek = {"S3W12","S4W1","S4W2","S4W3","S4W4","S4W5","S4W6","S4W7","S4W8","S4W9","S4W10","S4W11","S4W12"};
 
             for(String x:liste){
-                File path = new File(line+"\\iRacing\\setups\\"+x+"\\Garage 61 - Team Rabbit Racing\\");
-                System.out.println(path);
-                if( path.exists() ) {
-                    File[] files = path.listFiles();
-                    for(int i=0; i<files.length; i++) {
-                        files[i].delete();
+                System.out.println(x);
+                for(String y:listeWeek){
+                    File path = new File(line+"\\iRacing\\setups\\"+x+"\\Garage 61 - Team Rabbit Racing\\"+y);
+                    System.out.println(path);
+                    if( path.exists() ) {
+                        File[] files = path.listFiles();
+                        for(int i=0; i<files.length; i++) {
+                            files[i].delete();
+                        }
+                        path.delete();
+                    }else{
+                        System.out.println("path n'existe pas");
                     }
-                }else{
-                    System.out.println("path n'existe pas");
                 }
+                
             }
             JOptionPane.showMessageDialog(null,"Vous avez supprimer tous les setups de Garage61", "Delete Automatique", JOptionPane.INFORMATION_MESSAGE);
         }else{
