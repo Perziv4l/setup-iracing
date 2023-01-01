@@ -18,10 +18,14 @@ import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 
 public class Main{
+
     public static void main(String[] args) {
 
-
-        configuration();
+        ArrayList<Voiture> listeVoitures = new ArrayList<Voiture>();
+        configuration(listeVoitures);
+        for(Voiture voiture:listeVoitures){
+            System.out.println(voiture.toString());
+        }
 
 
 //        //Récupération de la saison et de la semaine des setups
@@ -69,7 +73,7 @@ public class Main{
 
     }
 
-    private static void configuration() {
+    private static void configuration(ArrayList<Voiture> listeVoiture) {
         // Création d'un parseur JSON
         Gson gson = new GsonBuilder().create();
 
@@ -87,8 +91,8 @@ public class Main{
                 String name = (String) itemMap.get("nomVoiture");
                 ArrayList<String> listRegex = (ArrayList<String>) itemMap.get("regex");
 
-                System.out.println(name);
-                System.out.println(listRegex);
+                Voiture nouvVoiture = new Voiture(name,listRegex);
+                listeVoiture.add(nouvVoiture);
             }
         } catch (IOException e) {
             e.printStackTrace();
