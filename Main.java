@@ -34,7 +34,7 @@ public class Main{
                 JOptionPane.QUESTION_MESSAGE,
                 null,
                 null,
-                "VRS/CRAIG/MAJOR");
+                "VRS/CRAIG/IRS");
 
         //Saison et semaine en majuscule
         s = s.toUpperCase();
@@ -63,11 +63,6 @@ public class Main{
         HashMap<String,String> hmap = new HashMap<String,String>();
 
         // Tous les regex permettant de différencier les voitures
-        hmap.put(".*[^i]r18.*",  "audir18");
-        hmap.put(".*audir18.*",  "audir18");
-        hmap.put(".*audilmp1.*",  "audir18");
-        hmap.put(".*919.*",  "porsche919");
-        hmap.put(".*porschelmp1.*",  "porsche919");
         hmap.put(".*p217.*",  "dallarap217");
         hmap.put(".*lmp2.*",  "dallarap217");
         hmap.put(".*m8.*",  "bmwm8gte");
@@ -85,11 +80,13 @@ public class Main{
         hmap.put(".*porschegte.*",  "porsche991rsr");
         hmap.put(".*r8.*",  "audir8gt3");
         hmap.put(".*audi_gts.*",  "audir8gt3");
+        hmap.put(".*VRS.*VSS.*AudiR8.*",  "audir8gt3");
         hmap.put(".*irs.*audi.*",  "audir8gt3");
         hmap.put(".*488gt3.*", "ferrarievogt3");
         hmap.put(".*488evo.*", "ferrarievogt3");
         hmap.put(".*ferrarievogt3.*", "ferrarievogt3");
         hmap.put(".*ferrari_gts.*", "ferrarievogt3");
+        hmap.put(".*GT_Sprint.*Ferrari.*", "ferrarievogt3");
         hmap.put(".*ferrarigt3.*", "ferrarievogt3");
         hmap.put(".*FEFE.*VRSGT.*", "ferrarievogt3");
         hmap.put(".*m4gt3.*", "bmwm4gt3");
@@ -102,16 +99,18 @@ public class Main{
         hmap.put(".*huracan.*",  "lamborghinievogt3");
         hmap.put(".*mp4[^3].*",  "mclarenmp4");
         hmap.put(".*mp430.*",  "mclarenmp430");
-        hmap.put(".*McLaren.GT4.*",  "mclarenmp430");
+        hmap.put(".*McLaren.GT4.*",  "mclaren570sgt4");
         hmap.put(".*mclaren_gts.*",  "mclarenmp4");
+        hmap.put(".*VSS-Mclaren.*",  "mclarenmp4");
         hmap.put(".*mclarengt3.*",  "mclarenmp4");
         hmap.put(".*MCLAREN_BASPLUS.*",  "mclarenmp4");
         hmap.put(".*IMSA_AL.*",  "mclarenmp4");
         hmap.put(".*macca.*",  "mclarenmp4");
         hmap.put(".*mclaren.driver.*",  "mclarenmp4");
-        hmap.put(".*mclaren[^(.driver)|^(gt3)|^(_gts)].*",  "mclaren570sgt4");
+        hmap.put(".*[^(VSS)].*mclaren[^(.driver)|^(gt3)|^(_gts)].*",  "mclaren570sgt4");
         hmap.put(".*ARA_MACCA.*",  "mclaren570sgt4");
         hmap.put(".*AMG.*Evo.*",  "mercedesamgevogt3");
+        hmap.put(".*PG_AMG.*",  "mercedesamgevogt3");
         hmap.put(".*MercEvo.*",  "mercedesamgevogt3");
         hmap.put(".*[^(CTMP_)]MERCOS.*",  "mercedesamgevogt3");
         hmap.put(".*Mercedes_GTS.*",  "mercedesamgevogt3");
@@ -120,14 +119,13 @@ public class Main{
         hmap.put(".*AMGGT3.*",  "mercedesamgevogt3");
         hmap.put(".*MERCOS__VRS.*",  "mercedesamgevogt3");
         hmap.put(".*IMSA_MERCOS.*",  "mercedesamgevogt3");
-        hmap.put(".*MercedesF1.*",  "mercedesw12");
-        hmap.put(".*W12.*",  "mercedesw12");
+        hmap.put(".*W13.*",  "mercedesw13");
         hmap.put(".*MercGT4.*",  "mercedesamggt4");
         hmap.put(".*MercedesGT4.*",  "mercedesamggt4");
         hmap.put(".*CTMP_MERCOS.*",  "mercedesamggt4");
+        hmap.put(".*GT4.*_Merc_.*",  "mercedesamggt4");
         hmap.put(".*AMGGT4.*",  "mercedesamggt4");
-        hmap.put(".*vss.*",  "fordgt gt3");
-        hmap.put(".*VRS.*FORDGT.*",  "fordgt gt3");
+        hmap.put(".*VRS.*VSS.*FordGT.*",  "fordgt gt3");
         hmap.put(".*911rs.*",  "porsche911rgt3");
         hmap.put(".*PORS.*HE.*VRS.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
@@ -135,6 +133,7 @@ public class Main{
         hmap.put(".*911gt3.*",  "porsche911rgt3");
         hmap.put(".*gt3r.*",  "porsche911rgt3");
         hmap.put(".*Porsche_Cup.*",  "porsche992cup");
+        hmap.put(".*PorscheCup.*",  "porsche992cup");
         hmap.put(".*tcr.*","audirs3lms");
         hmap.put(".*rs3.*","audirs3lms");
         hmap.put(".*bmwm4gt4.*","bmwm4gt4");
@@ -176,15 +175,15 @@ public class Main{
         hmap.put(".*beetle.*","vwbeetlegrc");
         hmap.put(".*fiesta.*","fordfiestarswrc");
         hmap.put(".*Elantra.*","hyundaielantracn7");
+        hmap.put(".*IRS.*HYUNDAI.*","hyundaielantracn7");
         hmap.put(".*Civic.*","hondacivictyper");
         hmap.put(".*992.*","porsche992cup");
         hmap.put(".*PCUP.*","porsche992cup");
         hmap.put(".*AudiGT3.*","audir8gt3");
-        hmap.put(".*V8.*","v8supercars holden2019");
-        hmap.put(".*Supercars.*","v8supercars holden2019");
         hmap.put(".*Vantage.*","amvantagegt4");
         hmap.put(".*Aston.*GT4.*","amvantagegt4");
         hmap.put(".*ASTON.*","amvantagegt4");
+        hmap.put(".*AMV8.*","amvantagegt4");
         hmap.put(".*Veloster.*","hyundaivelostern");
         hmap.put(".*VELOSTER.*","hyundaivelostern");
         hmap.put(".*MercedesF1.*", "mercedesw12");
@@ -192,6 +191,10 @@ public class Main{
         hmap.put(".*F4.*","formulair04");
         hmap.put(".*SCB.*", "stockcarbrasil corolla");
         hmap.put(".*STOCK CAR BRASIL", "stockcarbrasil corolla");
+        hmap.put(".*BMW-LMDh.*", "bmwlmdh");
+        hmap.put(".*BMW_LMDH.*", "bmwlmdh");
+        hmap.put(".*bmwLMDh.*", "bmwlmdh");
+        hmap.put(".*MHV8.*", "bmwlmdh");
 
         //Pour chaque setup check si il y a un pattern correspondant puis déclenche la méthode déplaçant les setups de place
         for(String i:liste){

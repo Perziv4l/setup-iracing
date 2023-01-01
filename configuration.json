@@ -1,0 +1,16 @@
+[
+  {
+    "nomVoiture" : "dallarap217",
+    "regex" : [
+      "p217",
+      "lmp2"
+    ]
+  },
+  {
+    "nomVoiture" : "bmwm8gte",
+    "regex" : [
+      "m8",
+      "bmwgte"
+    ]
+  }
+]

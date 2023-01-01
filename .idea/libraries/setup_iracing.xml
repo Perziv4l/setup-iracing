@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="setup-iracing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/insert_automaticv3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/insert_automaticv3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/insert_automaticv2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/insert_automaticv2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/insert_automaticv3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/insert_automaticv2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
