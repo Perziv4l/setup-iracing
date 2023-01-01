@@ -1,12 +1,12 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -201,7 +201,8 @@ public class Main{
             for(String key:hmap.keySet()){
                 if(check_pattern(key, i)) remplissage(line,hmap.get(key), s, i,setup);
             }   
-        }       
+        }
+
     }
 
 

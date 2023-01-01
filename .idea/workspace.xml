@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf7d8ed3-d399-41bf-bd2b-c72746227a0e" name="Changes" comment="Ajout de commentaire pour audit de code V2">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/setup_iracing_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/setup_iracing.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Voiture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/setup_iracing_jar/setup-iracing.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/artifacts/setup_iracing_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/libraries/setup_iracing.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/clearMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/config.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/setup-iracing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup-iracing.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BCmJsUpnnmardmcscK9niAXDKH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/OneDrive/Bureau/projet-rabbit&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dylan\OneDrive\Bureau\projet-rabbit" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="projet-rabbit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="clearMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="clearMain" />
+      <module name="projet-rabbit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="projet-rabbit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="projet-rabbit" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.clearMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf7d8ed3-d399-41bf-bd2b-c72746227a0e" name="Changes" comment="" />
+      <created>1656418372819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656418372819</updated>
+      <workItem from="1656418374058" duration="6155000" />
+      <workItem from="1656621131332" duration="29000" />
+      <workItem from="1656882403208" duration="436000" />
+      <workItem from="1657056385975" duration="1162000" />
+      <workItem from="1657645478586" duration="135000" />
+      <workItem from="1663008737616" duration="1954000" />
+      <workItem from="1663598227131" duration="2217000" />
+      <workItem from="1663616406364" duration="332000" />
+      <workItem from="1664226301910" duration="361000" />
+      <workItem from="1666784878453" duration="122000" />
+      <workItem from="1672172409651" duration="4678000" />
+      <workItem from="1672498777727" duration="55000" />
+      <workItem from="1672600223137" duration="2468000" />
+      <workItem from="1672602819532" duration="222000" />
+      <workItem from="1672603257633" duration="166000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ajout de commentaire pour audit de code">
+      <created>1663609816591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663609816591</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ajout de commentaire pour audit de code V2">
+      <created>1663610419259</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663610419259</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajout de commentaire pour audit de code" />
+    <MESSAGE value="Ajout de commentaire pour audit de code V2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de commentaire pour audit de code V2" />
+  </component>
+</project>
