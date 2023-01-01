@@ -1,16 +1,154 @@
 [
   {
-    "nomVoiture" : "dallarap217",
+    "nomVoiture" : "mercedesw13",
     "regex" : [
-      "p217",
-      "lmp2"
+      "MercedesW13"
+    ]
+  },
+  {
+    "nomVoiture" : "dallaraf3",
+    "regex" : [
+      "F3"
+    ]
+  },
+  {
+    "nomVoiture" : "formularenault35",
+    "regex" : [
+      "FR35"
+    ]
+  },
+  {
+    "nomVoiture" : "porsche992cup",
+    "regex" : [
+      "992Cup"
+    ]
+  },
+  {
+    "nomVoiture" : "ferrari488gte",
+    "regex" : [
+      "488GTE"
     ]
   },
   {
     "nomVoiture" : "bmwm8gte",
     "regex" : [
-      "m8",
-      "bmwgte"
+      "ESS_M8"
+    ]
+  },
+  {
+    "nomVoiture" : "dallarap217",
+    "regex" : [
+      "P217"
+    ]
+  },
+  {
+    "nomVoiture" : "formulair04",
+    "regex" : [
+      "F4"
+    ]
+  },
+  {
+    "nomVoiture" : "ferrarievogt3",
+    "regex" : [
+      "488GT3"
+    ]
+  },
+  {
+    "nomVoiture" : "bmwlmdh",
+    "regex" : [
+      "BMW_LMDh",
+      "bmwLMDh"
+    ]
+  },
+  {
+    "nomVoiture" : "bmwm4gt4",
+    "regex" : [
+      "M4GT4"
+    ]
+  },
+  {
+    "nomVoiture" : "porsche991rsr",
+    "regex" : [
+      "RSR"
+    ]
+  },
+  {
+    "nomVoiture" : "lamborghinievogt3",
+    "regex" : [
+      "Lambo"
+    ]
+  },
+  {
+    "nomVoiture" : "amvantagegt4",
+    "regex" : [
+      "AstonGT4"
+    ]
+  },
+  {
+    "nomVoiture" : "mercedesamggt4",
+    "regex" : [
+      "MercGT4"
+    ]
+  },
+  {
+    "nomVoiture" : "porsche718gt4",
+    "regex" : [
+      "718GT4"
+    ]
+  },
+  {
+    "nomVoiture" : "mercedesamgevogt3",
+    "regex" : [
+      "VRS.*AMG"
+    ]
+  },
+  {
+    "nomVoiture" : "bmwm4gt3",
+    "regex" : [
+      "M4GT3"
+    ]
+  },
+  {
+    "nomVoiture" : "mclarenmp4",
+    "regex" : [
+      "MP412C"
+    ]
+  },
+  {
+    "nomVoiture" : "dallarair18",
+    "regex" : [
+      "IR18"
+    ]
+  },
+  {
+    "nomVoiture" : "c8rvettegte",
+    "regex" : [
+      "C8"
+    ]
+  },
+  {
+    "nomVoiture" : "fordgt2017",
+    "regex" : [
+      "FGTE"
+    ]
+  },
+  {
+    "nomVoiture" : "mclaren570sgt4",
+    "regex" : [
+      "570S"
+    ]
+  },
+  {
+    "nomVoiture" : "porsche911rgt3",
+    "regex" : [
+      "GT3R"
+    ]
+  },
+  {
+    "nomVoiture" : "audir8gt3",
+    "regex" : [
+      "AudiR8"
     ]
   }
+
 ]
