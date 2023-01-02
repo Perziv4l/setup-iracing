@@ -23,55 +23,73 @@ public class Main{
 
         ArrayList<Voiture> listeVoitures = new ArrayList<Voiture>();
         configuration(listeVoitures);
-        for(Voiture voiture:listeVoitures){
-            System.out.println(voiture.toString());
+
+
+        //Récupération de la saison et de la semaine des setups
+        String s = (String)JOptionPane.showInputDialog(
+        null,
+        "Completer :\n \"Sous Forme S5W10\"",
+        "Nom Sous dossier",
+        JOptionPane.QUESTION_MESSAGE,
+        null,
+        null,
+        "S?W?");
+
+        //Récupération du nom du fournisseur du setup
+        String setup = (String)JOptionPane.showInputDialog(
+                null,
+                "Veuillez rentrer le fournisseur de setup",
+                "Nom du setup",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                null,
+                "VRS/CRAIG/IRS");
+
+        //Saison et semaine en majuscule
+        s = s.toUpperCase();
+
+        BufferedReader reader = null;
+        String line = null;
+
+        //Récupération de la zone où se trouve le dossier iRacing et donnée
+        try {
+            reader = new BufferedReader(new FileReader("config.txt"));
+            line = reader.readLine();
+            System.out.println(line);
+        } catch (IOException ioe) {
+            System.out.println(ioe.getMessage());
+        }
+
+        //Répertoire de stock des setups d'un fournisseur
+        File repertoire = new File(line+"Donnée");
+        System.out.println(repertoire);
+
+        //Liste tous les setups du stock
+        String[] liste = repertoire.list();
+
+
+        for(String setups:liste){
+            String pathVoiture = getpathVoiture(setups,listeVoitures);
+            if(pathVoiture!=null){
+                remplissage(line,pathVoiture,s,setups,setup);
+            }
         }
 
 
-//        //Récupération de la saison et de la semaine des setups
-//        String s = (String)JOptionPane.showInputDialog(
-//        null,
-//        "Completer :\n \"Sous Forme S5W10\"",
-//        "Nom Sous dossier",
-//        JOptionPane.QUESTION_MESSAGE,
-//        null,
-//        null,
-//        "S?W?");
-//
-//        //Récupération du nom du fournisseur du setup
-//        String setup = (String)JOptionPane.showInputDialog(
-//                null,
-//                "Veuillez rentrer le fournisseur de setup",
-//                "Nom du setup",
-//                JOptionPane.QUESTION_MESSAGE,
-//                null,
-//                null,
-//                "VRS/CRAIG/IRS");
-//
-//        //Saison et semaine en majuscule
-//        s = s.toUpperCase();
-//
-//        BufferedReader reader = null;
-//        String line = null;
-//
-//        //Récupération de la zone où se trouve le dossier iRacing et donnée
-//        try {
-//            reader = new BufferedReader(new FileReader("config.txt"));
-//            line = reader.readLine();
-//            System.out.println(line);
-//        } catch (IOException ioe) {
-//            System.out.println(ioe.getMessage());
-//        }
-//
-//        //Répertoire de stock des setups d'un fournisseur
-//        File repertoire = new File(line+"Donnée");
-//        System.out.println(repertoire);
-//
-//        //Liste tous les setups du stock
-//        String liste[] = repertoire.list();
-
-
     }
+
+    private static String getpathVoiture(String setups, ArrayList<Voiture> listeVoitures) {
+
+        for(Voiture voiture:listeVoitures){
+            for(String regex:voiture.getListRegex()){
+                if(check_pattern(regex,setups)){
+                    return voiture.getNomVoiture();
+                }
+            }
+        }
+        return null;
+    }
+
 
     private static void configuration(ArrayList<Voiture> listeVoiture) {
         // Création d'un parseur JSON

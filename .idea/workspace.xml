@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf7d8ed3-d399-41bf-bd2b-c72746227a0e" name="Changes" comment="Ajout de commentaire pour audit de code V2">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/setup_iracing_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/setup_iracing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Voiture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/setup_iracing_jar/setup-iracing.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/artifacts/setup_iracing_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/libraries/setup_iracing.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/clearMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/config.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv2.9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/insert_automaticv3.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/setup-iracing/setup-iracing.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup-iracing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,18 +28,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/OneDrive/Bureau/projet-rabbit&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/dylanM/OneDrive - ASTREE SOFTWARE/Bureau/perso/setup-iracing/setup-iracing",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dylan\OneDrive\Bureau\projet-rabbit" />

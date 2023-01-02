@@ -2,68 +2,85 @@
   {
     "nomVoiture" : "mercedesw13",
     "regex" : [
-      "MercedesW13"
+      "W13"
     ]
   },
   {
     "nomVoiture" : "dallaraf3",
     "regex" : [
-      "F3"
+      "F3[^5]"
     ]
   },
   {
     "nomVoiture" : "formularenault35",
     "regex" : [
-      "FR35"
+      "FR35",
+      "F35"
     ]
   },
   {
     "nomVoiture" : "porsche992cup",
     "regex" : [
-      "992Cup"
+      "992Cup",
+      "PorscheCup",
+      "Pcup",
+      "PORSCHE992"
     ]
   },
   {
     "nomVoiture" : "ferrari488gte",
     "regex" : [
-      "488GTE"
+      "488GTE",
+      "488gte"
     ]
   },
   {
     "nomVoiture" : "bmwm8gte",
     "regex" : [
-      "ESS_M8"
+      "ESS_M8",
+      "M8GTE",
+      "Bmwm8"
     ]
   },
   {
     "nomVoiture" : "dallarap217",
     "regex" : [
-      "P217"
+      "P217",
+      "LMP2"
     ]
   },
   {
     "nomVoiture" : "formulair04",
     "regex" : [
-      "F4"
+      "F4",
+      "IR04"
     ]
   },
   {
     "nomVoiture" : "ferrarievogt3",
     "regex" : [
-      "488GT3"
+      "488GT3",
+      "GT_Sprint.*ferrari",
+      "488gt3"
     ]
   },
   {
     "nomVoiture" : "bmwlmdh",
     "regex" : [
       "BMW_LMDh",
-      "bmwLMDh"
+      "bmwLMDh",
+      "BMW_LMDH",
+      "BMWLMDh",
+      "MHV8"
     ]
   },
   {
     "nomVoiture" : "bmwm4gt4",
     "regex" : [
-      "M4GT4"
+      "M4GT4",
+      "BMWGT4",
+      "BMW.GT4",
+      "AMGGT4"
     ]
   },
   {
@@ -81,37 +98,52 @@
   {
     "nomVoiture" : "amvantagegt4",
     "regex" : [
-      "AstonGT4"
+      "AstonGT4",
+      "Aston.GT4",
+      "AMV8"
     ]
   },
   {
     "nomVoiture" : "mercedesamggt4",
     "regex" : [
-      "MercGT4"
+      "MercGT4",
+      "GT4.*Merc",
+      "MercedesGT4"
     ]
   },
   {
     "nomVoiture" : "porsche718gt4",
     "regex" : [
-      "718GT4"
+      "718GT4",
+      "CAYMAN",
+      "Porsche.GT4",
+      "Cayman"
     ]
   },
   {
     "nomVoiture" : "mercedesamgevogt3",
     "regex" : [
-      "VRS.*AMG"
+      "VRS.*AMG",
+      "MercEvo",
+      "AMG2020",
+      "AMG_EVO",
+      "AMGGT3"
     ]
   },
   {
     "nomVoiture" : "bmwm4gt3",
     "regex" : [
-      "M4GT3"
+      "M4GT3",
+      "M4_GT3",
+      "BmwGt3",
+      "M4.*M4"
     ]
   },
   {
     "nomVoiture" : "mclarenmp4",
     "regex" : [
-      "MP412C"
+      "MP412C",
+      "McLarenGT3"
     ]
   },
   {
@@ -129,26 +161,80 @@
   {
     "nomVoiture" : "fordgt2017",
     "regex" : [
-      "FGTE"
+      "FGTE",
+      "FordGTE"
     ]
   },
   {
     "nomVoiture" : "mclaren570sgt4",
     "regex" : [
-      "570S"
+      "570S",
+      "McLaren.GT4",
+      "GT4.*McLaren"
     ]
   },
   {
     "nomVoiture" : "porsche911rgt3",
     "regex" : [
-      "GT3R"
+      "GT3R",
+      "P911GT3",
+      "911gt3",
+      "911GT3"
     ]
   },
   {
     "nomVoiture" : "audir8gt3",
     "regex" : [
-      "AudiR8"
+      "AudiR8",
+      "R8"
+    ]
+  },
+  {
+    "nomVoiture" : "elantra",
+    "regex" : [
+      "Elantra"
+    ]
+  },
+  {
+    "nomVoiture" : "veloster",
+    "regex" : [
+      "VELOSTER",
+      "Veloster"
+    ]
+  },
+  {
+    "nomVoiture" : "civi",
+    "regex" : [
+      "HondaTCR",
+      "Civic"
+    ]
+  },
+  {
+    "nomVoiture" : "audirs3",
+    "regex" : [
+      "RS3",
+      "AudiTCR"
+    ]
+  },
+  {
+    "nomVoiture" : "fordgt",
+    "regex" : [
+      "FGT3"
+    ]
+  },
+  {
+    "nomVoiture" : "mazda",
+    "regex" : [
+      "MX5CUP",
+      "Mazda"
+    ]
+  },
+  {
+    "nomVoiture" : "GT86",
+    "regex" : [
+      "GT86"
     ]
   }
+
 
 ]
