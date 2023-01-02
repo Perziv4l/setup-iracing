@@ -55,20 +55,19 @@ public class Main{
         try {
             reader = new BufferedReader(new FileReader("config.txt"));
             line = reader.readLine();
-            System.out.println(line);
         } catch (IOException ioe) {
             System.out.println(ioe.getMessage());
         }
 
         //Répertoire de stock des setups d'un fournisseur
         File repertoire = new File(line+"Donnée");
-        System.out.println(repertoire);
 
         //Liste tous les setups du stock
         String[] liste = repertoire.list();
 
 
         for(String setups:liste){
+            System.out.println("*************************************************");
             String pathVoiture = getpathVoiture(setups,listeVoitures);
             if(pathVoiture!=null){
                 remplissage(line,pathVoiture,s,setups,setup);
@@ -83,6 +82,7 @@ public class Main{
         for(Voiture voiture:listeVoitures){
             for(String regex:voiture.getListRegex()){
                 if(check_pattern(regex,setups)){
+                    System.out.println(setups+" -> "+regex+" -> "+voiture.getNomVoiture());
                     return voiture.getNomVoiture();
                 }
             }
