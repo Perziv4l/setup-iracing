@@ -67,10 +67,8 @@
   {
     "nomVoiture" : "bmwlmdh",
     "regex" : [
-      "BMW_LMDh",
-      "bmwLMDh",
+      "LMDh",
       "BMW_LMDH",
-      "BMWLMDh",
       "MHV8"
     ]
   },
@@ -108,7 +106,8 @@
     "regex" : [
       "MercGT4",
       "GT4.*Merc",
-      "MercedesGT4"
+      "MercedesGT4",
+      "MERCOS.*GT4"
     ]
   },
   {
@@ -127,7 +126,8 @@
       "MercEvo",
       "AMG2020",
       "AMG_EVO",
-      "AMGGT3"
+      "AMGGT3",
+      "IMSA__MERCOS"
     ]
   },
   {
@@ -190,47 +190,48 @@
     ]
   },
   {
-    "nomVoiture" : "elantra",
+    "nomVoiture" : "hyundaielantracn7",
     "regex" : [
       "Elantra"
     ]
   },
   {
-    "nomVoiture" : "veloster",
+    "nomVoiture" : "hyundaivelostern",
     "regex" : [
       "VELOSTER",
       "Veloster"
     ]
   },
   {
-    "nomVoiture" : "civi",
+    "nomVoiture" : "hondacivictyper",
     "regex" : [
       "HondaTCR",
       "Civic"
     ]
   },
   {
-    "nomVoiture" : "audirs3",
+    "nomVoiture" : "audirs3lms",
     "regex" : [
       "RS3",
       "AudiTCR"
     ]
   },
   {
-    "nomVoiture" : "fordgt",
+    "nomVoiture" : "fordgt gt3",
     "regex" : [
-      "FGT3"
+      "FGT3",
+      "VSS.*FordGT"
     ]
   },
   {
-    "nomVoiture" : "mazda",
+    "nomVoiture" : "mx5 cup",
     "regex" : [
       "MX5CUP",
       "Mazda"
     ]
   },
   {
-    "nomVoiture" : "GT86",
+    "nomVoiture" : "toyotagr86",
     "regex" : [
       "GT86"
     ]

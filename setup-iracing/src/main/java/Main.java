@@ -1,5 +1,6 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 
@@ -16,24 +17,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.swing.JOptionPane;
+import javax.xml.crypto.Data;
 
 public class Main{
 
-    public static void main(String[] args) {
-
-        ArrayList<Voiture> listeVoitures = new ArrayList<Voiture>();
-        configuration(listeVoitures);
-
+    public static void main(String[] args) throws FileNotFoundException {
 
         //Récupération de la saison et de la semaine des setups
         String s = (String)JOptionPane.showInputDialog(
-        null,
-        "Completer :\n \"Sous Forme S5W10\"",
-        "Nom Sous dossier",
-        JOptionPane.QUESTION_MESSAGE,
-        null,
-        null,
-        "S?W?");
+                null,
+                "Completer :\n \"Sous Forme S5W10\"",
+                "Nom Sous dossier",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                null,
+                "S?W?");
 
         //Récupération du nom du fournisseur du setup
         String setup = (String)JOptionPane.showInputDialog(
@@ -50,6 +48,10 @@ public class Main{
 
         BufferedReader reader = null;
         String line = null;
+
+        ArrayList<Voiture> listeVoitures = new ArrayList<Voiture>();
+        configuration(listeVoitures);
+
 
         //Récupération de la zone où se trouve le dossier iRacing et donnée
         try {
@@ -91,30 +93,31 @@ public class Main{
     }
 
 
-    private static void configuration(ArrayList<Voiture> listeVoiture) {
-        // Création d'un parseur JSON
-        Gson gson = new GsonBuilder().create();
+    private static void configuration(ArrayList<Voiture> listeVoiture) throws FileNotFoundException {
+        FileReader reader = new FileReader("configuration.json");
 
-        // Lecture du fichier JSON
-        try (InputStream in = JsonParser.class.getResourceAsStream("/configuration.json");
-             InputStreamReader reader = new InputStreamReader(in)) {
-            // Parsing du JSON en objet Java
-            List<Object> data = gson.fromJson(new JsonReader(reader), List.class);
+        // Création d'un JsonParser et d'un Gson
+        JsonParser parser = new JsonParser();
+        Gson gson = new Gson();
 
-            // Accès aux éléments du tableau
-            for (Object item : data) {
-                // Conversion de l'élément en objet Map
-                Map<String, Object> itemMap = (Map<String, Object>) item;
+        // Conversion du contenu du fichier en JsonElement
+        JsonElement jsonElement = parser.parseReader(reader);
 
-                String name = (String) itemMap.get("nomVoiture");
-                ArrayList<String> listRegex = (ArrayList<String>) itemMap.get("regex");
+        // Conversion de JsonElement en l'objet cible
+        List<Object> data = gson.fromJson(jsonElement, List.class);
 
-                Voiture nouvVoiture = new Voiture(name,listRegex);
-                listeVoiture.add(nouvVoiture);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        // Accès aux éléments du tableau
+        for (Object item : data) {
+            // Conversion de l'élément en objet Map
+            Map<String, Object> itemMap = (Map<String, Object>) item;
+
+            String name = (String) itemMap.get("nomVoiture");
+            ArrayList<String> listRegex = (ArrayList<String>) itemMap.get("regex");
+
+            Voiture nouvVoiture = new Voiture(name,listRegex);
+            listeVoiture.add(nouvVoiture);
         }
+
     }
 
 
